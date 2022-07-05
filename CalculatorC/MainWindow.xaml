@@ -1,0 +1,93 @@
+﻿<Window x:Class="CalculatorC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorC"
+        mc:Ignorable="d"
+        Title="Calculator" Height="480" Width="340" Background="#FF272727" Icon="/Calculator-icon (1).png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    
+
+
+    <Grid x:Name="MainRoot">
+        <Grid.Background>
+            <ImageBrush TileMode="None" Stretch="Uniform"/>
+
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="26*"/>
+
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+
+        </Grid.RowDefinitions>
+        <!-- SecondGreat -->
+        <Button x:Name="PlusAndMinus" Grid.Row="7" Grid.Column="0" FontSize="20" Foreground="White" Background="#FF080707" Margin="0,51,0,0" Grid.RowSpan="2" BorderBrush="#FF272727">+/-</Button >
+        <Button x:Name="Dot" Grid.Row="7" Grid.Column="2" FontSize="20" Foreground="White" Background="#FF080707" Margin="0,51,0,0" Grid.RowSpan="2" BorderBrush="#FF272727">.</Button>
+        <!-- Result -->
+        <Button x:Name="Enter" Grid.Row="7" Grid.Column="3" FontSize="20" Background="#FF171717" Foreground="White" Margin="0,51,0,0" Grid.RowSpan="2" BorderBrush="#FF272727">=</Button>
+
+        <!-- MainGreat -->
+        <Button x:Name="Plus" Grid.Row="6" Grid.Column="3" FontSize="20" Background="#FF171717" Foreground="White" BorderBrush="#FF272727" Margin="0,51,0,0" Grid.RowSpan="2">+</Button>
+        <Button x:Name="Minus" Grid.Row="5" Grid.Column="3" FontSize="20" Background="#FF171717" Foreground="White" Margin="0,51,0,51" Grid.RowSpan="3" BorderBrush="#FF272727">-</Button>
+        <Button x:Name="Multiplication" Grid.Row="4" Grid.Column="3" FontSize="20" Background="#FF171717" Foreground="White" BorderBrush="#FF272727" Margin="0,51,0,51" Grid.RowSpan="3">×</Button>
+        <Button x:Name="Division" Grid.Row="3" Grid.Column="3" FontSize="20" Background="#FF171717" Foreground="White" Margin="0,51,0,51" Grid.RowSpan="3" BorderBrush="#FF272727">÷</Button>
+
+        <!-- NUMBERS -->
+        <Button x:Name="Number0" Grid.Row="7" Grid.Column="1" FontSize="20" Foreground="White" Background="#FF080707" Margin="0,51,0,0" Grid.RowSpan="2" BorderBrush="#FF272727">0</Button>
+        <Button x:Name="Number1" Grid.Row="6" Grid.Column="0" FontSize="20" Foreground="White" Background="#FF080707" BorderBrush="#FF272727" Margin="0,51,0,0" Grid.RowSpan="2">1</Button>
+        <Button x:Name="Number2" Grid.Row="6" Grid.Column="1" FontSize="20" Foreground="White" Background="#FF080707" BorderBrush="#FF272727" Margin="0,51,0,0" Grid.RowSpan="2">2</Button>
+        <Button x:Name="Number3" Grid.Row="6" Grid.Column="2" FontSize="20" Foreground="White" Background="#FF080707" BorderBrush="#FF272727" Margin="0,51,0,0" Grid.RowSpan="2">3</Button>
+        <Button x:Name="Number6" Grid.Row="5" Grid.Column="2" FontSize="20" Foreground="White" Background="#FF080707" Margin="0,51,0,51" Grid.RowSpan="3" BorderBrush="#FF272727">6</Button>
+        <Button x:Name="Number5" Grid.Row="5" Grid.Column="1" FontSize="20" Foreground="White" Background="#FF080707" Margin="0,51,0,51" Grid.RowSpan="3" BorderBrush="#FF272727">5</Button>
+        <Button x:Name="Number4" Grid.Row="5" Grid.Column="0" FontSize="20" Foreground="White" Background="#FF080707" Margin="0,51,0,51" Grid.RowSpan="3" BorderBrush="#FF272727">4</Button>
+        <Button x:Name="Number7" Grid.Row="4" Grid.Column="0" FontSize="20" Foreground="White" Background="#FF080707" BorderBrush="#FF272727" Margin="0,51,0,51" Grid.RowSpan="3">7</Button>
+        <Button x:Name="Number8" Grid.Row="4" Grid.Column="1" FontSize="20" Foreground="White" Background="#FF080707" BorderBrush="#FF272727" Margin="0,51,0,51" Grid.RowSpan="3">8</Button>
+        <Button x:Name="Number9" Grid.Row="4" Grid.Column="2" FontSize="20" Foreground="White" Background="#FF080707" BorderBrush="#FF272727" Margin="0,51,0,51" Grid.RowSpan="3">9</Button>
+
+
+        <!-- hard operations -->
+        <Button x:Name="_1divNumber" Grid.Row="3" Grid.Column="0" FontSize="20" Background="#FF171717" Foreground="White" Margin="0,51,0,51" Grid.RowSpan="3" BorderBrush="#FF272727">/</Button>
+        <Button x:Name="powerof" Grid.Row="3" Grid.Column="1" FontSize="20" Background="#FF171717" Foreground="White" Margin="0,51,0,51" Grid.RowSpan="3" BorderBrush="#FF272727">x²</Button>
+        <Button x:Name="sqrt" Grid.Row="3" Grid.Column="2" FontSize="20" Background="#FF171717" Foreground="White" Margin="0,51,0,51" Grid.RowSpan="3" BorderBrush="#FF272727">√x</Button>
+        <Button x:Name="percent" Grid.Row="3" Grid.Column="0" FontSize="20" Background="#FF171717" Foreground="White" BorderBrush="#FF272727" Margin="0,2,0,51" Grid.RowSpan="2">%</Button>
+
+
+        <!-- DELETERS -->
+        <Button x:Name="Delete" Grid.Row="3" Grid.Column="1" FontSize="20" Background="#FF171717" Foreground="White" BorderBrush="#FF272727" Margin="0,2,0,51" Grid.RowSpan="2">CE</Button>
+        <Button x:Name="DeleteAll" Grid.Row="3" Grid.Column="2" FontSize="20" Background="#FF171717" Foreground="White" BorderBrush="#FF272727" Margin="0,2,0,51" Grid.RowSpan="2">C</Button>
+        <Button x:Name="DeleteSymbol" Grid.Row="3" Grid.Column="3" FontSize="20" Background="#FF171717" Foreground="White" BorderBrush="#FF272727" Margin="0,2,0,51" Grid.RowSpan="2">⌫</Button>
+
+
+        <Button x:Name="Menu" Grid.Column="0" FontSize="20" Background="#FF272727" Foreground="White" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderBrush="#FF272727" HorizontalAlignment="Left" Width="25" Height="26" Margin="-1,0,0,0" VerticalAlignment="Top">≡</Button>
+
+        <Button x:Name="NumberMC" Content="MC" HorizontalAlignment="Left" Height="25" Margin="5,0,0,0" Width="38" Grid.Row="2" Foreground="White" FontWeight="Normal" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" />
+        <Button x:Name="NumberMR" Content="MR" HorizontalAlignment="Left" Height="25" Margin="47,0,0,0" Width="38" Grid.Row="2" Foreground="White" FontWeight="Normal" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
+        <Button x:Name="NumberMplus" Content="M+" HorizontalAlignment="Left" Height="25" Margin="47,0,0,0" Width="38" Grid.Row="2" Foreground="White" Grid.Column="1" FontWeight="Normal" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
+        <Button x:Name="NumberMCminus" Content="M-" HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" Width="38" Grid.Row="2" Foreground="White" Grid.Column="2" FontWeight="Normal" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
+        <Button x:Name="NumberMS" Content="MS" HorizontalAlignment="Left" Height="25" Margin="7,0,0,0" Width="38" Grid.Row="2" Foreground="White" Grid.Column="3" FontWeight="Normal" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
+        <Button x:Name="NumberMHistory" Content="M▽" HorizontalAlignment="Left" Height="25" Margin="50,0,0,0" Width="35" Foreground="White" Grid.Row="2" Grid.Column="3" FontWeight="Normal" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
+        <TextBlock x:Name="MainText"  TextAlignment="Right" FontSize="36" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" Grid.ColumnSpan="4"  Foreground="White" Margin="5,10,0,15" Grid.Row="1" MaxWidth="78979787797" AutomationProperties.IsColumnHeader="True" AutomationProperties.IsRequiredForForm="True">
+            
+
+
+        </TextBlock>
+        <TextBlock x:Name="Stantard" HorizontalAlignment="Left" Height="23" Margin="24,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" Foreground="White" FontSize="14"><Run Text="Standard"/><LineBreak/><Run/></TextBlock>
+
+
+
+    </Grid>
+</Window>
